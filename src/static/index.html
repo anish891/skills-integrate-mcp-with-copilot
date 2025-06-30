@@ -8,8 +8,17 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-row">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div id="admin-icon-container">
+          <button id="admin-icon" title="Admin Login">
+            <img src="https://octodex.github.com/images/dojocat.jpg" alt="Admin" height="40" />
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -39,6 +48,26 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <!-- Admin Login Modal -->
+      <div id="admin-modal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close" id="close-admin-modal">&times;</span>
+          <h3>Admin Login</h3>
+          <form id="admin-login-form">
+            <div class="form-group">
+              <label for="admin-username">Username:</label>
+              <input type="text" id="admin-username" required />
+            </div>
+            <div class="form-group">
+              <label for="admin-password">Password:</label>
+              <input type="password" id="admin-password" required />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <div id="admin-login-message" class="hidden"></div>
+        </div>
+      </div>
     </main>
 
     <footer>
